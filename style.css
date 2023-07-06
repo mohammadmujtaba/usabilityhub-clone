@@ -12,11 +12,15 @@
 }
 
 .navbar {
+ 
   display: flex;
   justify-content: space-between; 
   align-items: center;
   padding-inline: 8vw;
   margin-top: 30px;
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
 .menu{
@@ -95,6 +99,11 @@ color:  #2294ed;
   background-color: #183b56;
   border-color:  #183b56;
 }
+
+.breadcrumb {
+  display: none;
+}
+
 
 .hero, .world-text {
   font-family: Averta PE,sans-serif;
@@ -188,4 +197,44 @@ color:  #2294ed;
     padding-inline: 20px;
     margin-top: 10px;
   }
+  
+  .breadcrumb{
+    display: flex;
+    width: 100%;
+  }
+
+ .breadcrumb +  .menu-items {
+    display: none;
+  }
+
+
+
+  .menu:hover .menu-items {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100vw;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    top: 100px;
+    border: 2px solid rebeccapurple;
+  }
+
+  .menu:hover  .dropdown>.dropdown-menu {
+    position: relative;
+    left: 0;
+  }
+
+  .menu:hover button {
+    width: 60%;
+    margin-inline: auto;
+  }
+
+  .menu:hover .sign-in {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
 }
+
+
